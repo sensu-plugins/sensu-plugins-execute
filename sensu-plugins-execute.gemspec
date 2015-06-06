@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.signing_key            = File.expand_path(pvt_key) if $PROGRAM_NAME =~ /gem\z/
   s.summary                = 'Sensu execute plugins'
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
-  s.version                = SensuPluginsRxrcute::Version::VER_STRING
+  s.version                = SensuPluginsExecute::Version::VER_STRING
 
   s.add_runtime_dependency 'sensu-plugin',      '1.1.0'
   s.add_runtime_dependency 'systemu',           '2.6.5'
