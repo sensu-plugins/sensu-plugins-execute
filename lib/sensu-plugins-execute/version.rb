@@ -1,4 +1,4 @@
-module SensuPluginsHubot
+module SensuPluginsExecute
   module Version
     MAJOR = 0
     MINOR = 0
