@@ -27,13 +27,13 @@ class Resolve < Sensu::Handler
     when 'CLASS'
       "-C #{class_type}"
     else
-      fail "Scope #{scope} is unknown, valid scope is HOST"
+      raise "Scope #{scope} is unknown, valid scope is HOST"
     end
   end
 
   def handle
     # #YELLOW
-    unless @event['status'] == 0 # rubocop:disable GuardClause
+    unless @event['status'] == 0
       executes = @event['check']['execute']
       executes.each do |execute|
         scope_param = get_scope_parameter execute
